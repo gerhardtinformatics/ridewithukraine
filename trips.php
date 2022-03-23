@@ -1,45 +1,63 @@
 <html>
   <head>
     <title>PHP Test</title>
-    <style>
-      td{
-        display: inline-table;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="trips.css">
   </head>
   <body>
-      <?php
-      echo "<table>";
+    <div class="container">
+    <header>
+    <h1 class="headertext"><img src="https://avatars.githubusercontent.com/u/77687247?s=200&v=4" class="logo">Powered by Mitfahrverband</h1>
+    </header>
+    <main>
+      <?php 
+      echo '<table id="result-container-card">';
         $filedata = file_get_contents('json_data.json');
         $details = json_decode($filedata, true);
         foreach ($details as $element) {
-          echo "<tr>"; 
-          echo "<td>";
-          echo($element['departTime']. "<br>");
-          echo "</td>";
+          echo '<tr>';
+
+          echo '<td>';
+          echo($element['departTime']. '<br>');
+          echo '</td>';
 
         foreach ($element['weekdays'] as $weekday){
-          echo "<td>";
-          echo($weekday). "<br>";
-          echo "</td>";
+          echo '<td>';
+          echo($weekday). '<br>';
+          echo '</td>';
 
         }
 
-          echo "<td>";
-          echo ($element['stops'][0]['address']. "<br>");
-          echo "</td>";
-          echo "<td>";
-          echo ($element['stops']['address'][count($element['stops']['address'])-1]. "<br>");
-          echo "</td>";
+          echo '<td>';
+          echo ($element['stops'][0]['address']. '<br>');
+          echo '</td>';
+          echo '<td>';
+          echo ($element['stops']['address']. '<br>');
+          echo '</td>';
         
 
-        echo "<td>";
-        echo($element['deeplink']. "<br>");
-        echo "</td>";
-        }
-        echo "</tr>";
-        echo "</table>";
-      ?>
+        echo '<td>';
+        echo($element['deeplink']. '<br>');
+        echo '</td>';
 
+        echo '<td>';
+        echo 'Show';
+        echo '</td>';
+        }
+        echo '</tr>';
+        echo '</table>';
+      ?>
+      </main>
+      <div id="right">
+      <div id="menu">Menü / FAQ / Hints for safe trips /.../.../.../</div>
+      <div id="content1">Welcome message</div>
+      <div id="search">Meta search mask</div>
+      <div id="content2">Die meisten zur Verfügung gestellten Routen</div>
+
+      <footer>
+        <p>Footer/ Impressum / Kontakt / Support /.../.../.../</p>
+        </footer>
+
+      </div>
+  </div>
   </body>
 </html>
