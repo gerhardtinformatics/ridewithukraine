@@ -36,7 +36,6 @@ main {
 
 #right {
   padding-top: 120px;
-  position: absolute;
   height: 100%;
   position: fixed;
   text-align: center;
@@ -85,7 +84,7 @@ footer {
   align-items: center;
 }
 
-#result-container-card {
+table#result-container-card {
   border-collapse: separate;
   margin-left: 10%;
   margin-right: 10%;
@@ -104,8 +103,8 @@ td {
   display: inline-table;
   color: #000000;
   padding: 1rem;
-  border: 1px solid lightgray;
   border-spacing: 15px;
+  width: 16%;
 }
 
 .logo {
@@ -120,4 +119,10 @@ td {
 
 .headertext {
   margin-left: 20px;
+}
+
+.submit {
+  float: right;
+  height: 30px;
+  width: 50px;
 }
