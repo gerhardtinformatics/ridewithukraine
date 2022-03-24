@@ -22,7 +22,7 @@
           echo '</td>';
 
           echo '<td id="dateTime">';
-          echo "DateTime";
+          echo "2022.03.24.";
           echo '</td>';
 
 

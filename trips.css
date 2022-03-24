@@ -99,7 +99,8 @@ tr {
 }
 
 td {
-  width: auto;
+  min-width: 16.6%;
+  max-width: 16.6%;
   display: inline-table;
   color: #000000;
   border-spacing: 10px;
@@ -124,41 +125,36 @@ td {
 
 .ride2go-logo {
   height: 50px;
-  width: auto;
+  width: 50px;
 }
 
 #departTime {
-  min-width: 10%;
-  max-width: 10%;
 }
 #dateTime {
-  min-width: 15%;
-  max-width: 15%;
 }
 
 #origin {
-  min-width: 25%;
-  max-width: 25%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
 }
 
 #destination {
-  min-width: 25%;
-  max-width: 25%;
-}
-
-#link {
-  min-width: 15%;
-  max-width: 15%;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #logo {
-  min-width: 10%;
-  max-width: 10%;
+  padding-left: 50px;
+}
+
+#link {
 }
 
 .mifaz-logo {
   height: 50px;
-  width: auto;
+  width: 50px;
 }
 
 a#button1 {
