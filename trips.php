@@ -49,7 +49,7 @@
         }
 
           echo '<td id="link">';
-          echo "<a href='$links'>Show</a>";
+          echo "<a id='button1' href='$links' >Show</a>";
           echo '</td>';
           }
 
