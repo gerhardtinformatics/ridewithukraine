@@ -2,26 +2,27 @@
   <head>
     <title>iframe</title>
     <link rel="stylesheet" type="text/css" href="iframe.css">
+    <meta name="iframe" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+    <header>
+    <h1 class="headertext"><img src="https://avatars.githubusercontent.com/u/77687247?s=200&v=4" class="mitfahrverband-logo">Powered by Mitfahrverband</h1>
+    </header>
     <div id="iframe-container">
     <?php 
       echo '<table id="result-container-card">';
-      echo '<tr>';
-      echo '<td>';
-      echo '<h1 class="headertext"><img src="https://avatars.githubusercontent.com/u/77687247?s=200&v=4" class="logo">Powered by Mitfahrverband</h1>';
-      echo '</td>';
-      echo '</tr>';
         $filedata = file_get_contents('./data/json_data.json');
-        $details = json_decode($filedata, true);
+        $details = json_decode($filedata, true);?>
+        <?php
         foreach ($details as $element) {
           echo '<tr>';
+
           echo '<td id="departTime">';
           echo($element['departTime']. '<br>');
           echo '</td>';
 
           echo '<td id="dateTime">';
-          echo "DateTime";
+          echo "2022.03.24.";
           echo '</td>';
 
 
@@ -33,18 +34,28 @@
           echo '</td>';
         
 
-        echo '<td id="link">';
-        echo($element['deeplink']. '<br>');
-        echo '</td>';
+          $links = $element['deeplink'];
 
-        echo '<td>';
-        echo '<input class="submit" type="submit" value="Show">';
-        echo '</td>';
+          $mifaz_word = "mifaz";
+
+          if(strpos($links, $mifaz_word) !== false){
+            echo '<td id="logo">';
+            echo '<img src="https://ride2go.com/img/mifaz_logo.png" class="mifaz-logo">';
+            echo '</td>';
+        } else{
+          echo '<td id="logo">';
+          echo '<img src="https://ride2go.com/img/r2g_favicon.png" class="ride2go-logo">';
+          echo '</td>';
         }
 
-        echo '</tr>';
-        echo '</table>';
-      ?>
+          echo '<td id="link">';
+          echo "<a id='button1' href='$links' >Show</a>";
+          echo '</td>';
+          }
+
+          echo '</tr>';
+          echo '</table>';
+          ?>
       </div>
   </body>
 </html>
