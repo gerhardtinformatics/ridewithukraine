@@ -11,7 +11,7 @@
     <main>
       <?php 
       echo '<table id="result-container-card">';
-        $filedata = file_get_contents('json_data.json');
+        $filedata = file_get_contents('./data/json_data.json');
         $details = json_decode($filedata, true);?>
         <?php
         foreach ($details as $element) {

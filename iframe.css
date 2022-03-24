@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #4472c4;
+  min-height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+
+table#result-container-card {
+  border-collapse: separate;
+  position: absolute;
+  display: grid;
+  min-height: 100%;
+  height: 100vh;
+  width: 100vw;
+  border-spacing: 0;
+  left: 0;
+  right: 0;
+}
+
+tr {
+  width: 100vw;
+  height: 50px;
+  background-color: #ffffff;
+  display: inline-table;
+  border: 1px solid lightgray;
+}
+
+td {
+  width: 50px;
+  display: inline-table;
+  color: #000000;
+  padding: 10px;
+  border-spacing: 0px;
+}
+
+.submit {
+  float: right;
+  height: 30px;
+  width: 50px;
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.logo {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  left: 0;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.headertext {
+  margin-left: 20px;
+  font-size: small;
+}
+
+body {
+  min-height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+
+#departTime {
+  width: 10%;
+}
+#dateTime {
+  width: 10%;
+}
+
+#origin {
+  width: 25%;
+}
+
+#destination {
+  width: 25%;
+}
+
+#link {
+  width: 20%;
+}
