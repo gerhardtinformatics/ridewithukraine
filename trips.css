@@ -86,8 +86,6 @@ footer {
 
 table#result-container-card {
   border-collapse: separate;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 tr {
@@ -102,12 +100,13 @@ td {
   width: auto;
   display: inline-table;
   color: #000000;
-  padding: 1rem;
-  border-spacing: 15px;
-  width: 16%;
+  border-spacing: 10px;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
 }
 
-.logo {
+.mitfahrverband-logo {
   display: inline-block;
   height: 75px;
   width: 75px;
@@ -121,8 +120,35 @@ td {
   margin-left: 20px;
 }
 
-.submit {
-  float: right;
-  height: 30px;
-  width: 50px;
+.ride2go-logo {
+  height: 50px;
+  width: auto;
+}
+
+#departTime {
+  width: 7.5%;
+}
+#dateTime {
+  width: 15%;
+}
+
+#origin {
+  width: 30%;
+}
+
+#destination {
+  width: 30%;
+}
+
+#link {
+  width: 7.5%;
+}
+
+#logo {
+  width: 10%;
+}
+
+.mifaz-logo {
+  height: 50px;
+  width: auto;
 }
