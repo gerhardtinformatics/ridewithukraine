@@ -18,7 +18,7 @@
           echo '<tr>';
 
           echo '<td id="departTime">';
-          echo($element['departTime']. '<br>');
+          echo($element['departTime']);
           echo '</td>';
 
           echo '<td id="dateTime">';
@@ -27,10 +27,14 @@
 
 
           echo '<td id="origin">';
-          echo ($element['stops'][0]['address']. '<br>');
+          echo "<div id='trip_path_div'>";
+          echo ($element['stops'][0]['address']);
+          echo "</div>";
           echo '</td>';
           echo '<td id="destination">';
-          echo end($element['stops'])['address']. '<br>';
+          echo "<div id='trip_path_div'>";
+          echo end($element['stops'])['address'];
+          echo "</div>";
           echo '</td>';
         
 
@@ -49,7 +53,7 @@
         }
 
           echo '<td id="link">';
-          echo "<a id='button1' href='$links' >Show</a>";
+          echo "<a id='button1' href='$links'target='_blank' >Show</a>";
           echo '</td>';
           }
 
